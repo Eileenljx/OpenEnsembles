@@ -89,7 +89,7 @@ class coMat:
             co_bin = self.gather_single_partition(solution)
             co_matrix += co_bin
         co_matrixF = co_matrix/self.nEnsembles
-        header = self.cObj.dataObj.df.index.get_values()
+        header = self.cObj.dataObj.df.index
         co_matrix_df = pd.DataFrame(index=header, data=co_matrixF,
                 columns=header)
         return co_matrix_df
